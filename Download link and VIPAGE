@@ -1,0 +1,123 @@
+
+Hello everyone! Welcome
+
+
+	We will have three main components:
+
+	Webpage (hosted on Tomcat)
+	IBM IIB
+	Microservices (using Spring Boot)
+	
+
+	
+	
+	
+	Here are the requirements for our setup:
+
+	Eclipse for Java EE development
+	Tomcat Server for hosting the webpage
+	Spring Boot for microservices
+	IBM Integration Bus (IIB) for integration tasks
+	MongoDB for data storage
+	
+
+	Check Current CORS Configuration
+	mqsireportproperties intName -E Ename e4 -o HTTPConnector -r
+	mqsireportproperties intName -b httplistener -o HTTPConnector -r
+		
+	
+		
+	step2 download eclipse ava-ee-developers
+	https://www.eclipse.org/downloads/packages/release/kepler/sr2/eclipse-ide-java-ee-developers
+
+	Download tomcat server for htttp page 
+	https://tomcat.apache.org/download-80.cgi   any version you like
+	Download mongodb
+	https://www.mongodb.com/try/download/community-kubernetes-operator
+	installation deriction 
+	https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/
+
+	Let’s get started!
+	cors
+	https://www.ibm.com/docs/en/integration-bus/10.0?topic=overview-cross-origin-resource-sharing
+	
+	
+	Download jar file  
+	https://github.com/microsoft/mssql-jdbc/releases
+	
+	MySQl jar link
+	
+	Introduction Bootstrap
+	https://getbootstrap.com/docs/4.0/getting-started/introduction/
+	
+	https://www.docs.inductiveautomation.com/docs/8.1/platform/database-connections/connecting-to-databases/jdbc-drivers-and-translators
+	
+	ibm information for jdbc 
+	https://www.ibm.com/docs/en/integration-bus/10.0?topic=properties-jdbcproviders-configurable-service
+	
+	
+	log4j link location
+	https://github.com/ot4i/node-for-log4j/releases
+	
+	jar connector chose platform independent
+	https://dev.mysql.com/downloads/connector/j/
+
+	
+	go to this link learn more about cors ,,,,
+	https://community.ibm.com/community/user/integration/viewdocument/cross-origin-resource-sharing-cors?CommunityKey=77544459-9fda-40da-ae0b-fc8c76f0ce18#:~:text=To%20enable%20CORS%20support%2C%20you%20just%20need%20to,-n%20corsEnabled%20-v%20true%20BIP8071I%3A%20Successful%20command%20completion.
+
+
+
+
+
+	Download java 
+	https://public.dhe.ibm.com/software/integration/integrationbus/labs/betaworks2015/IIB1000_04_EmployeeService_GlobalCache.pdf
+
+
+	TUTORIAL JAVACOMPUTE DATABASE
+	https://www.ibm.com/docs/en/integration-bus/10.0?topic=java-interacting-databases-by-using-javacompute-node
+
+
+
+
+
+https://drive.google.com/file/d/1BwLnWTiGFjOCdE0MxU1764jv32NWRCN/view?usp=drivesdk
+
+
+
+
+
+	Spring boot tutorial
+	https://www.geeksforgeeks.org/spring-framework-architecture/?ref=lbp
+
+
+	Download Log4j and direction
+	https://logging.apache.org/log4j/2.x/download.html
+
+	ibm log4j
+	https://github.com/jamie3/iib-log4j2
+
+	<a href="http://localhost:7899/web/ts.jpg" class="image-link">
+	 
+	 
+	 
+	download jdbc  
+	 https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html
+ 
+	 
+	 HTTP Statues Code 
+	 https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+ 
+ 
+  
+	  find a port number and stop it 
+	  netstat -aon | findstr :1112
+		stop it 
+		taskkill /PID 20880 /F
+	
+Enable Cors	
+mqsichangeproperties nodeNameHere -e serverNameHere -o HTTPConnector -n corsEnabled -v true
+mqsichangeproperties nodeNameHere -e serverNameHere -o HTTPConnector -n corsMaxAge -v 0	
+
+Sign port number 
+mqsichangeproperties nodeNameHere -e serverNameHere -o ComIbmJVMManager -n jvmDebugPort -v 1333
